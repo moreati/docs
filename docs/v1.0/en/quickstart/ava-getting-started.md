@@ -416,7 +416,7 @@ curl -X POST --data '{
     "params": {
     	"username":"YOUR USERNAME HERE",
     	"password":"YOUR PASSWORD HERE",
-		"to":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+		"to":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
 		"payerNonce":1
     },
     "id": 1
@@ -538,7 +538,7 @@ curl -X POST --data '{
     "params": {
     	"id":"ARCLrphAHZ28xZEBfUL7SVAmzkTZNe1LK",
     	"payerNonce":2,
-    	"destination":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+    	"destination":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
     	"startTime":'$(date --date="10 minutes" +%s)',
     	"endTime":'$(date --date="2 days" +%s)',
     	"stakeAmount":10000,
@@ -572,7 +572,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"111fRKBNoBhBfeGvBzvz6r9dZUKbEnUypM6tjiSyYrWM4ojSTuL2Syxv8cFLphtYaxdM1EA3Aj4yej8ABSfmjb9NMrtxQac9cnWwCER7GHSzFULB25hAtzGtJ8XhsrKcvtpAM8FwjRzg3Bg1q6V8GTKGMC219bYMETS48GMFGh4nts1Jsf246rjZ26r1Vyok8MdnoaxjQWR6cKq",
-    	"signer":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+    	"signer":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
     	"username":"YOUR USERNAME HERE",
     	"password":"YOUR PASSWORD HERE"
     },

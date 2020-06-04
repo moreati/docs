@@ -69,7 +69,7 @@ curl -X POST --data '{
     "id"     :1,
     "method" :"platform.getAccount",
     "params" :{
-        "address": "6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV"
+        "address": "P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV"
     }
 }' -H 'content-type:application/json;' 127.0.0.1:9650/ext/P
 ```
@@ -80,7 +80,7 @@ Since we haven't done anything with this account its nonce is 0:
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
+        "address": "P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
         "nonce": "0",
         "balance": "20000000000000"
     },
@@ -137,7 +137,7 @@ curl -X POST --data '{
     "params": {
     	"id":"ARCLrphAHZ28xZEBfUL7SVAmzkTZNe1LK",
     	"payerNonce":1,
-    	"destination":"Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
+    	"destination":"P-Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
     	"startTime":'$(date --date="10 minutes" +%s)',
     	"endTime":'$(date --date="2 days" +%s)',
     	"stakeAmount":1000000,
@@ -173,7 +173,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"111fRKBNoBhBfeGvBzvz6r9dZUKbEnUypM6tjiSyYrWM4ojSTuL2Syxv8cFLphtYaxdM1EA3Aj4yej8ABSfmjb9NMrtxQac9cnWwCER7GHSzFULB25hAtzGtJ8XhsrKcvtpAM8FwjRzg3Bg1q6V8GTKGMC219bYMETS48GMFGh4nts1Jsf246rjZ26r1Vyok8MdnoaxjQWR6cKq",
-    	"signer":"6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
+    	"signer":"P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
     	"username":"YOUR USERNAME",
     	"password":"YOUR PASSWORD"
     },
@@ -310,7 +310,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"1115PJEszaVtWiXtNfyeSvUX385ih3x7V1AyiWFqYKUHp5orbz1oJ9CizuU2dK8pKJpoFtFD1MQMmvi6p4uC1GkoiGg54ujbVDnMwidhkinAhbeVPKsX6Ekdg3hLk5SWHkjDGnaNSavu4K86Z4fu1tB1xgfk9vyACzDjCU4w5rksPfqEZA48zskrh6cuK1QW1ruXPje8iWaNfzjr7cYdFa6EaPC4BcTS",
-    	"signer":"98vMGrh2nWNr8oDNKVK9jdxN1bwkeg4Jd",
+    	"signer":"P-98vMGrh2nWNr8oDNKVK9jdxN1bwkeg4Jd",
     	"username":"USER THAT CONTROL THE SIGNER'S KEY",
     	"password":"THAT USER'S PASSWORD"
     },
@@ -338,7 +338,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"1112i3pBsJBwde3PTEVXNpSpd6HKymaFvF9ejGjbuQR3omM4oa6CR9d51maB57ri6PxphfHYANkTQGpotbdRr6c2AzpVotzBfHSfx5Zdt29xcYZQFvAmY3KT9yXA1JEJguX9D6BHvCMFW9n9uymMP2Y7iPwAmSQLJLe53c8LFFzor3bsARJjA16EPnX5gwsXoG1ePJQSSFb6oNkxtSi2dHwNK1zdRvr5V8iUTTbvvzvaFFHxafNAhbzwr9eBKT9iAis2gGC6U1ZokWqsevRSwruyZGYWoLx7VEfCECtKSfU5VAzdw7H1DcXPj",
-    	"signer":"6UGRmWANxejv1uM5T8BiRR2VPFSk1aFWA",
+    	"signer":"P-6UGRmWANxejv1uM5T8BiRR2VPFSk1aFWA",
     	"username":"USER THAT CONTROL THE SIGNER'S KEY",
     	"password":"THAT USER'S PASSWORD"
     },
@@ -366,7 +366,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"111fRKBNoBhBfeGvBzvz6r9dZUKbEnUypM6tjiSyYrWM4ojSTuL2Syxv8cFLsFAf7GaCbLiBWEfaDfEaQ7L1qMgeimPbewtBPphXSnHy6mx86YZvBKFTyE659CYAb6kKcj3L8osr4Kf8Qd3zJCAFPbSy8sxowA27p1SJuueVw5kHdWannWzfFmPNN7DBV8wpymmktGT3gbgq7ZV",
-    	"signer":"6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
+    	"signer":"P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
     	"username":"USER THAT CONTROLS THE SIGNER'S KEY",
     	"password":"THAT USER'S PASSWORD"
     },

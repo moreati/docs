@@ -169,7 +169,7 @@ curl -X POST --data '{
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf"
+        "address": "P-Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf"
     },
     "id": 1
 }
@@ -203,7 +203,7 @@ curl -X POST --data '{
     "id"     :1,
     "method" :"platform.getAccount",
     "params" :{
-        "address": "NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4"
+        "address": "P-NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4"
     }
 }' -H 'content-type:application/json;' 127.0.0.1:9650/ext/P
 ```
@@ -214,7 +214,7 @@ curl -X POST --data '{
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4",
+        "address": "P-NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4",
         "nonce": "0",
         "balance": "0"
     },
@@ -270,12 +270,12 @@ curl -X POST --data '{
     "result": {
         "accounts": [
             {
-                "address": "Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
+                "address": "P-Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
                 "nonce": "0",
                 "balance": "0"
             },
             {
-                "address": "NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4",
+                "address": "P-NcbCRXGMpHxukVmT8sirZcDnCLh1ykWp4",
                 "nonce": "0",
                 "balance": "0"
             }
@@ -521,7 +521,7 @@ curl -X POST --data '{
     "params": {
         "id":"ARCLrphAHZ28xZEBfUL7SVAmzkTZNe1LK",
     	"payerNonce":1,
-    	"destination":"Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
+    	"destination":"P-Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
     	"startTime":'$(date --date="10 minutes" +%s)',
     	"endTime":'$(date --date="2 days" +%s)',
     	"stakeAmount":1000000,
@@ -646,7 +646,7 @@ curl -X POST --data '{
     "params": {
     	"id":"MFrZFVCXPv5iCn6M9K6XduxGTYp891xXZ",
     	"payerNonce":1,
-    	"destination":"Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
+    	"destination":"P-Q4MzFZZDPHRPAHFeDs3NiyyaZDvxHKivf",
     	"startTime":1594102400,
     	"endTime":1604102400,
     	"stakeAmount":100000
@@ -701,8 +701,8 @@ curl -X POST --data '{
     "method": "platform.createSubnet",
     "params": {
     	"controlKeys":[
-    		"98vMGrh2nWNr8oDNKVK9jdxN1bwkeg4Jd",
-    		"6UGRmWANxejv1uM5T8BiRR2VPFSk1aFWA"
+    		"P-98vMGrh2nWNr8oDNKVK9jdxN1bwkeg4Jd",
+    		"P-6UGRmWANxejv1uM5T8BiRR2VPFSk1aFWA"
     	],
     	"threshold":2,
     	"payerNonce":1
@@ -767,8 +767,8 @@ curl -X POST --data '{
             {
                 "id": "hW8Ma7dLMA7o4xmJf3AXBbo17bXzE7xnThUd3ypM4VAWo1sNJ",
                 "controlKeys": [
-                    "KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
-                    "Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
+                    "P-KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
+                    "P-Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
                 ],
                 "threshold": "2"
             }
@@ -1022,8 +1022,8 @@ platform.importAVA(
 ) -> {tx: string}
 ```
 
-* `to` is the ID of the account the AVA is sent to.
-  This must be the same as the `to` argument in the corresponding call to the X-Chain's `exportAVA`.
+* `to` is the address of the account the AVA is sent to.
+  This must be the same as the `to` argument in the corresponding call to the X-Chain's `exportAVA`, except that the prepended `P-` should be included in this argument.
 * `payerNonce` is the next unused nonce of the account specified in `to`.
 * `username` is the user that controls the account specified in `to`.
 * `tx` is the transaction, which should be sent to the network by calling `issueTx`.
@@ -1037,7 +1037,7 @@ curl -X POST --data '{
     "params": {
     	"username":"bob",
     	"password":"loblaw",
-		"to":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+		"to":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
 		"payerNonce":1
     },
     "id": 1
@@ -1089,7 +1089,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"111Bit5JNASbJyTLrd2kWkYRoc96swEWoWdmEhuGAFK3rCAyTnTzomuFwgx1SCUdUE71KbtXPnqj93KGr3CeftpPN37kVyqBaAQ5xaDjr7wU8riGS89NDJ8AwVgZgnFkgF3uMfwCiCuPvvubGyQxNHE4TM9iDgj6h3URdGQ4JntP44wokCEP3ADn7sMM8kUTbmcNo84U87",
-    	"signer":"6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
+    	"signer":"P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
     	"username":"bob",
     	"password":"loblaw"
     },

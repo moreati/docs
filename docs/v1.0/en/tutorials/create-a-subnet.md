@@ -79,7 +79,7 @@ The key is held by the user we just specified.
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "KNjXsaA1sZsaKCD1cd85YXauDuxshTes2"
+        "address": "P-KNjXsaA1sZsaKCD1cd85YXauDuxshTes2"
     },
     "id": 1
 }
@@ -105,7 +105,7 @@ The response contains the second control key, which is held by the user we just 
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
+        "address": "P-Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
     },
     "id": 2
 }
@@ -122,8 +122,8 @@ curl -X POST --data '{
     "method": "platform.createSubnet",
     "params": {
     	"controlKeys":[
-    		"KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
-    		"Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
+    		"P-KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
+    		"P-Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
     	],
     	"threshold":2,
     	"payerNonce":1
@@ -154,7 +154,7 @@ curl -X POST --data '{
     "method": "platform.sign",
     "params": {
     	"tx":"1112LA7e8GvkGHDkxZa9Q7kszr1HN6ppLb9KCUv41BzceP3uyzYFQN1jUgZdAjchGkGPXYJn9P1N36qdxpSaGLotkCZv4UXUToksTiGHBK3nGB1J2sxfgsqjfH1TesstRqqX2QDF5k6DP2E6JWni89fZvZGZPdPWoTp5de3iePnTPNMgSn",
-    	"signer":"6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
+    	"signer":"P-6Y3kysjF9jnHnYkdS9yGAuoHyae2eNmeV",
     	"username":"USER THAT CONTROLS ACCOUNT PAYING FEE",
     	"password":"THEIR PASSWORD"
     },
@@ -224,8 +224,8 @@ The response confirms that our Subnet was created:
             {
                 "id": "hW8Ma7dLMA7o4xmJf3AXBbo17bXzE7xnThUd3ypM4VAWo1sNJ",
                 "controlKeys": [
-                    "KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
-                    "Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
+                    "P-KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
+                    "P-Aiz4eEt5xv9t4NCnAWaQJFNz5ABqLtJkR"
                 ],
                 "threshold": "2"
             }
@@ -293,7 +293,7 @@ curl -X POST --data '{
     "result": {
         "accounts": [
             {
-                "address": "KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
+                "address": "P-KNjXsaA1sZsaKCD1cd85YXauDuxshTes2",
                 "nonce": "0",
                 "balance": "0"
             }

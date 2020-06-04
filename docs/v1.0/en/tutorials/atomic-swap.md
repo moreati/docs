@@ -108,7 +108,7 @@ curl -X POST --data '{
     "params": {
     	"username":"myUsername",
     	"password":"myPassword",
-		"to":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+		"to":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
 		"payerNonce":1
     },
     "id": 1
@@ -149,7 +149,7 @@ curl -X POST --data '{
     "jsonrpc": "2.0",
     "method": "platform.getAccount",
     "params":{
-    	"address":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH"
+    	"address":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH"
     },
     "id": 1
 }' -H 'content-type:application/json;' 127.0.0.1:9650/ext/bc/P
@@ -161,7 +161,7 @@ The response should look like this:
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+        "address": "P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
         "nonce": "1",
         "balance": "500"
     },
@@ -253,7 +253,7 @@ curl -X POST --data '{
     "jsonrpc": "2.0",
     "method": "platform.getAccount",
     "params":{
-    	"address":"Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH"
+    	"address":"P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH"
     },
     "id": 1
 }' -H 'content-type:application/json;' 127.0.0.1:9650/ext/bc/P
@@ -265,7 +265,7 @@ The response should look like this:
 {
     "jsonrpc": "2.0",
     "result": {
-        "address": "Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
+        "address": "P-Bg6e45gxCUTLXcfUuoy3go2U6V3bRZ5jH",
         "nonce": "2",
         "balance": "250"
     },
