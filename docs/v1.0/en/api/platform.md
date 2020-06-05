@@ -222,6 +222,95 @@ curl -X POST --data '{
 }
 ```
 
+### platform.importKey
+
+Give a user control over an address by providing the private key that controls the address.
+
+#### Signature
+
+```go
+platform.importKey({
+    username: string,
+    password:string,
+    privateKey:string
+}) -> {address: string}
+```
+
+* Add `privateKey` to `username`'s set of private keys. `address` is the address `username` now controls with the private key.
+
+#### Example Call
+
+```json
+curl -X POST --data '{
+    "jsonrpc":"2.0",
+    "id"     :3,
+    "method" :"platform.importKey",
+    "params" :{
+        "username" :"bob",
+        "password":"loblaw",
+        "privateKey":"2w4XiXxPfQK4TypYqnohRL8DRNTz9cGiGmwQ1zmgEqD9c9KWLq"
+    }
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/platform
+```
+
+#### Example Response
+
+```json
+{
+    "jsonrpc":"2.0",
+    "id"     :3,
+    "result" :{
+        "address":"P-7u5FQArVaMSgGZzeTE9ckheWtDhU5T3KS"
+    }
+}
+```
+
+
+### platform.exportKey
+
+Get the private key that controls a given address.  
+The returned private key can be added to a user with `platform.importKey`.
+
+#### Signature
+
+```go
+platform.exportKey({
+    username: string,
+    password:string,
+    address:string
+}) -> {privateKey: string}
+```
+
+* `username` must control `address`.
+* `privateKey` is the string representation of the private key that controls `address`.
+
+#### Example Call
+
+```json
+curl -X POST --data '{
+    "jsonrpc":"2.0",
+    "id"     :3,
+    "method" :"platform.exportKey",
+    "params" :{
+        "username" :"bob",
+        "password":"loblaw",
+        "address": "P-7u5FQArVaMSgGZzeTE9ckheWtDhU5T3KS"
+    }
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/platform
+```
+
+#### Example Response
+
+```json
+{
+    "jsonrpc":"2.0",
+    "id"     :3,
+    "result" :{
+        "privateKey":"2w4XiXxPfQK4TypYqnohRL8DRNTz9cGiGmwQ1zmgEqD9c9KWLq"
+    }
+}
+```
+
 ### platform.listAccounts
 
 List the accounts controlled by the specified user.
