@@ -203,7 +203,7 @@ curl -X POST --data '{
         "password":"loblaw",
         "privateKey":"2w4XiXxPfQK4TypYqnohRL8DRNTz9cGiGmwQ1zmgEqD9c9KWLq"
     }
-}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/platform
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/P
 ```
 
 #### Example Response
@@ -248,7 +248,7 @@ curl -X POST --data '{
         "password":"loblaw",
         "address": "7u5FQArVaMSgGZzeTE9ckheWtDhU5T3KS"
     }
-}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/platform
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/P
 ```
 
 #### Example Response
