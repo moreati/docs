@@ -68,3 +68,19 @@ curl -X POST --data '{
    "id":1
 }
 ```
+
+### More Information
+
+The Health API provides some basic health information using the [go-sundheit](https://github.com/AppsFlyer/go-sundheit) library.
+
+The node will periodically execute a check to verify that it is still operational. This is only an extremely basic check to show that it is still online and does not indicate that a node has successfully connected to peers or bootstrapped. It only provides the following information:
+
+Heartbeat: the unix timestamp of the last time the network triggered a heartbeat to signal that it was alive and well.
+
+Timestamp: the time of the last health check.
+
+Duration: The execution duration of the last health check in milliseconds.
+
+Contiguous Failures: the number of failures that occurred in a row.
+
+Time of First Failure: The time of the initial transitional failure.
