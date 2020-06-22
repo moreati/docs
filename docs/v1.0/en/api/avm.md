@@ -228,6 +228,45 @@ curl -X POST --data '{
 }
 ```
 
+### avm.getAtomicUTXOs
+
+Get the atomic UTXOs that reference a given address.
+
+#### Signature
+
+```go
+avm.getAtomicUTXOs({addresses: string}) -> {utxos: []string}
+```
+
+* `UTXOs` is a list of atomic UTXOs such that each UTXO references at least one address in `addresses`
+
+#### Example Call
+
+```json
+curl -X POST --data '{
+    "jsonrpc":"2.0",
+    "id"     :1,
+    "method" :"avm.getAtomicUTXOs",
+    "params" :{
+        "addresses":["X-xMrKg8uUECt5CS9RE9j5hizv2t2SWTbk"]
+    }
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/bc/X
+```
+
+#### Example Response
+
+```go
+{
+    "jsonrpc": "2.0",
+    "result": {
+        "utxos": [
+            "3ng2kBneUGy8SY98FgNvEMPo2pgL7m9UqcTDbL4svzdNKiuTpQCewGeJyTqppjMjaimnAvQfVfBTWcy2Da2CAKMy9P3Pu6E4nqp7NbrNN1aptYTEGoeg6oMjV76QGiWn37RhFcWuboDLst778nemsE7RrNhccgnHAXCQ"
+        ]
+    },
+    "id": 1
+}
+```
+
 ### avm.issueTx
 
 Send a signed transaction to the network.
